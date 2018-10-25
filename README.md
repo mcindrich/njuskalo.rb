@@ -20,6 +20,27 @@ Usage: njuskalo.rb [options]
     -c, --category CATEGORY          Category to look in (example: apple-iphone => https://www.njuskalo.hr/apple-iphone )
 ```
 
+### Example
+
+```
+$ ./njuskalo.rb -r 5 -l 5000 -c iphone-5s
+Ad #1: 
+	iPhone 5s, 16 GB
+	850 kn
+Ad #2: 
+	Apple iphone 5s
+	500 kn
+Ad #3: 
+	iPhone 5s
+	899 kn
+Ad #4: 
+	Iphone 5 s kutija
+	900 kn
+Ad #5: 
+	iPhone 5S 16GB ** TIP TOP STANJE ** SVA OPREMA ** SVE MREŽE **
+	1.100 kn
+```
+
 
 ### TODO
  - [ ] Extract the link for an Ad
