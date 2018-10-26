@@ -3,6 +3,7 @@ class Ad
     article.children.each do |item|
       if item['class'] == "entity-title"
         @title = item.text
+        @link = item.children[0]["href"]
       elsif item['class'] == "entity-description"
         @description = item.children[1].text.strip
       elsif item['class'] == "entity-pub-date"
@@ -15,19 +16,23 @@ class Ad
     #puts article.children[7].attr('class')
   end
 
-  def getTitle()
+  def getTitle
     @title
   end
 
-  def getPrice()
+  def getLink
+    @link
+  end
+
+  def getPrice
     @price
   end
 
-  def getPublishDate() 
+  def getPublishDate
     @pub_date
   end
 
-  def getDescription() 
+  def getDescription 
     @description
   end
 end

@@ -43,6 +43,6 @@ Ad #5:
 
 
 ### TODO
- - [ ] Extract the link for an Ad
+ - [x] Extract the link for an Ad
  - [ ] Add the argument for sorting by the price
  - [ ] Add show types

@@ -5,6 +5,7 @@ require 'io/console'
 require 'optparse'  
 require './ad.rb'
 
+$url = "https://www.njuskalo.hr/"
 OPTIONS = {:result_number=>0, :page_number=>"1", :limit=>-1, :show_type=>0, :category=>""}
 
 def parseArgs
@@ -36,12 +37,17 @@ end
 def printAd(ad, num)
   case OPTIONS[:show_type]
   when 0
-    print "Ad ##{num}: \n"
-    print "\t"
+    #print "Ad ##{num}: \n"
+    print "#{num}: [ "
     print ad.getTitle
-    puts ""
-    print "\t"
+    #puts ""
+    print " ==> "
     print ad.getPrice
+    print " ]"
+    puts ""
+    print "\t ==> "
+    print "https://www.njuskalo.hr" + ad.getLink
+    puts ""
     puts ""
   when 1
   when 2
@@ -50,18 +56,17 @@ end
 
 def main
   ads = []
-  url="https://www.njuskalo.hr/"
 
   if OPTIONS[:category] != ""
-    url += OPTIONS[:category]
+    $url += OPTIONS[:category]
   else
     puts "No category specified.\nExiting..."
     exit
   end
 
-  url += "?page=" + OPTIONS[:page_number]
+  url_with_page = $url + "?page=" + OPTIONS[:page_number]
 
-  command = "curl -A 'random_ua' \"" + url + "\" -s"
+  command = "curl -A 'random_ua' \"" + url_with_page + "\" -s"
   html = `#{command}`
   page = Nokogiri::HTML(html)
 
@@ -77,7 +82,7 @@ def main
 
   if OPTIONS[:result_number].to_i > 0
     for i in 0..ads.size-1
-      if i+1 > OPTIONS[:result_number].to_i
+      if counter >= OPTIONS[:result_number].to_i
         break
       end
       if OPTIONS[:limit].to_i != -1
@@ -94,6 +99,7 @@ def main
         end
       else
         printAd(ads[i], i)
+        counter += 1
       end
     end
   end
