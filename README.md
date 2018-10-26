@@ -23,22 +23,21 @@ Usage: njuskalo.rb [options]
 ### Example
 
 ```
-$ ./njuskalo.rb -r 5 -l 5000 -c iphone-5s
-Ad #1: 
-	iPhone 5s, 16 GB
-	850 kn
-Ad #2: 
-	Apple iphone 5s
-	500 kn
-Ad #3: 
-	iPhone 5s
-	899 kn
-Ad #4: 
-	Iphone 5 s kutija
-	900 kn
-Ad #5: 
-	iPhone 5S 16GB ** TIP TOP STANJE ** SVA OPREMA ** SVE MREŽE **
-	1.100 kn
+$ ./njuskalo.rb -r 5 -l 1800 -c dell-prijenosnici  
+1: [ **Dell N0573** 1000kn niza cijena ==> 1.650 kn ]
+	 ==> https://www.njuskalo.hr/dell-prijenosnici/dell-n0573-1000kn-niza-cijena-oglas-26787645
+
+2: [ DELL Vostro 3560 ==> 1.000 kn ]
+	 ==> https://www.njuskalo.hr/dell-prijenosnici/dell-vostro-3560-oglas-26681084
+
+3: [ Dell Inspirion 3551,intel Quad core,4gb,500HDD-a,intel HD grap. 1500kn ==> 1.500 kn ]
+	 ==> https://www.njuskalo.hr/dell-prijenosnici/dell-inspirion-3551-intel-quad-core-4gb-500hdd-a-intel-hd-grap-1700kn-oglas-25571723
+
+4: [ Dell Latitude D430 Core 2 Duo 1.2GHz 80GB 2GB Laptop ==> 999 kn ]
+	 ==> https://www.njuskalo.hr/dell-prijenosnici/dell-latitude-d430-core-2-duo-1.2ghz-80gb-2gb-laptop-oglas-4118182
+
+5: [ Dell Inspiron N5030 sa novom baterijom, torba ==> 1.100 kn ]
+	 ==> https://www.njuskalo.hr/dell-prijenosnici/dell-inspiron-n5030-p07f-oglas-26432568
 ```
 
 
